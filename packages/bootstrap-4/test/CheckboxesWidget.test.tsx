@@ -13,7 +13,7 @@ describe("CheckboxesWidget", () => {
               enumOptions: [{ value: "" }],
             },
           })}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe("CheckboxesWidget", () => {
           {...makeWidgetMockProps({
             options: { enumOptions: [{ value: "" }], inline: true },
           })}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

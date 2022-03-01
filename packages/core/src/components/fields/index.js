@@ -11,16 +11,16 @@ import NullField from "./NullField";
 import UnsupportedField from "./UnsupportedField";
 
 export default {
-  AnyOfField: MultiSchemaField,
-  ArrayField,
-  BooleanField,
-  DescriptionField,
-  NumberField,
-  ObjectField,
-  OneOfField: MultiSchemaField,
-  SchemaField,
-  StringField,
-  TitleField,
-  NullField,
-  UnsupportedField,
+    AnyOfField: MultiSchemaField,
+    ArrayField,
+    BooleanField,
+    DescriptionField,
+    NumberField,
+    ObjectField,
+    OneOfField: MultiSchemaField,
+    SchemaField,
+    StringField,
+    TitleField,
+    NullField,
+    UnsupportedField,
 };

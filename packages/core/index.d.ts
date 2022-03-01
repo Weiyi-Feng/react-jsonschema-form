@@ -1,8 +1,8 @@
 // Originally from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/@rjsf/core/index.d.ts
 
-declare module '@rjsf/core' {
-    import * as React from 'react';
-    import { JSONSchema7, JSONSchema7Definition, JSONSchema7Type, JSONSchema7TypeName } from 'json-schema';
+declare module "@rjsf/core" {
+    import * as React from "react";
+    import { JSONSchema7, JSONSchema7Definition, JSONSchema7Type, JSONSchema7TypeName } from "json-schema";
 
     type ErrorSchema = {
         [k: string]: ErrorSchema;
@@ -61,9 +61,9 @@ declare module '@rjsf/core' {
     export default class Form<T> extends React.Component<FormProps<T>> {
         validate: (
             formData: T,
-            schema?: FormProps<T>['schema'],
-            additionalMetaSchemas?: FormProps<T>['additionalMetaSchemas'],
-            customFormats?: FormProps<T>['customFormats'],
+            schema?: FormProps<T>["schema"],
+            additionalMetaSchemas?: FormProps<T>["additionalMetaSchemas"],
+            customFormats?: FormProps<T>["customFormats"],
         ) => { errors: AjvError[]; errorSchema: ErrorSchema };
         onChange: (formData: T, newErrorSchema: ErrorSchema) => void;
         onBlur: (id: string, value: any) => void;
@@ -71,13 +71,13 @@ declare module '@rjsf/core' {
     }
 
     export type UiSchema = {
-        'ui:field'?: Field | string;
-        'ui:widget'?: Widget | string;
-        'ui:options'?: { [key: string]: boolean | number | string | object | any[] | null };
-        'ui:order'?: string[];
-        'ui:FieldTemplate'?: React.StatelessComponent<FieldTemplateProps>;
-        'ui:ArrayFieldTemplate'?: React.StatelessComponent<ArrayFieldTemplateProps>;
-        'ui:ObjectFieldTemplate'?: React.StatelessComponent<ObjectFieldTemplateProps>;
+        "ui:field"?: Field | string;
+        "ui:widget"?: Widget | string;
+        "ui:options"?: { [key: string]: boolean | number | string | object | any[] | null };
+        "ui:order"?: string[];
+        "ui:FieldTemplate"?: React.StatelessComponent<FieldTemplateProps>;
+        "ui:ArrayFieldTemplate"?: React.StatelessComponent<ArrayFieldTemplateProps>;
+        "ui:ObjectFieldTemplate"?: React.StatelessComponent<ObjectFieldTemplateProps>;
         [name: string]: any;
     };
 
@@ -100,10 +100,8 @@ declare module '@rjsf/core' {
         FieldPath;
 
     export interface WidgetProps
-        extends Pick<
-            React.HTMLAttributes<HTMLElement>,
-            Exclude<keyof React.HTMLAttributes<HTMLElement>, 'onBlur' | 'onFocus'>
-        > {
+        extends Pick<React.HTMLAttributes<HTMLElement>,
+            Exclude<keyof React.HTMLAttributes<HTMLElement>, "onBlur" | "onFocus">> {
         id: string;
         schema: JSONSchema7;
         uiSchema: UiSchema;
@@ -114,7 +112,7 @@ declare module '@rjsf/core' {
         autofocus: boolean;
         placeholder: string;
         onChange: (value: any) => void;
-        options: NonNullable<UiSchema['ui:options']>;
+        options: NonNullable<UiSchema["ui:options"]>;
         formContext: any;
         onBlur: (id: string, value: any) => void;
         onFocus: (id: string, value: any) => void;
@@ -122,6 +120,7 @@ declare module '@rjsf/core' {
         multiple: boolean;
         rawErrors: string[];
         registry: Registry;
+
         [prop: string]: any; // Allow for other props
     }
 
@@ -136,7 +135,7 @@ declare module '@rjsf/core' {
     }
 
     export interface FieldProps<T = any>
-        extends Pick<React.HTMLAttributes<HTMLElement>, Exclude<keyof React.HTMLAttributes<HTMLElement>, 'onBlur' | 'onFocus'>> {
+        extends Pick<React.HTMLAttributes<HTMLElement>, Exclude<keyof React.HTMLAttributes<HTMLElement>, "onBlur" | "onFocus">> {
         schema: JSONSchema7;
         uiSchema: UiSchema;
         idSchema: IdSchema;
@@ -152,6 +151,7 @@ declare module '@rjsf/core' {
         readonly: boolean;
         required: boolean;
         name: string;
+
         [prop: string]: any; // Allow for other props
     }
 
@@ -285,7 +285,7 @@ declare module '@rjsf/core' {
         formData: T;
     };
 
-    export type ThemeProps<T = any> = Omit<FormProps<T>, 'schema'>;
+    export type ThemeProps<T = any> = Omit<FormProps<T>, "schema">;
 
     export function withTheme<T = any>(
         themeProps: ThemeProps<T>,
@@ -321,20 +321,20 @@ declare module '@rjsf/core' {
 
         export function computeDefaults<T = any>(
             schema: JSONSchema7,
-            parentDefaults: JSONSchema7['default'][],
-            definitions: Registry['definitions'],
+            parentDefaults: JSONSchema7["default"][],
+            definitions: Registry["definitions"],
             rawFormData?: T,
             includeUndefinedValues?: boolean,
-        ): JSONSchema7['default'][];
+        ): JSONSchema7["default"][];
 
         export function getDefaultFormState<T = any>(
             schema: JSONSchema7,
             formData: T,
-            definitions?: Registry['definitions'],
+            definitions?: Registry["definitions"],
             includeUndefinedValues?: boolean,
-        ): T | JSONSchema7['default'][];
+        ): T | JSONSchema7["default"][];
 
-        export function getUiOptions(uiSchema: UiSchema): UiSchema['ui:options'];
+        export function getUiOptions(uiSchema: UiSchema): UiSchema["ui:options"];
 
         export function getDisplayLabel(schema: JSONSchema7, uiSchema: UiSchema, rootSchema?: JSONSchema7): boolean;
 
@@ -348,23 +348,23 @@ declare module '@rjsf/core' {
 
         export function isConstant(schema: JSONSchema7): boolean;
 
-        export function toConstant(schema: JSONSchema7): JSONSchema7Type | JSONSchema7['const'];
+        export function toConstant(schema: JSONSchema7): JSONSchema7Type | JSONSchema7["const"];
 
-        export function isSelect(_schema: JSONSchema7, definitions?: Registry['definitions']): boolean;
+        export function isSelect(_schema: JSONSchema7, definitions?: Registry["definitions"]): boolean;
 
-        export function isMultiSelect(schema: JSONSchema7, definitions?: Registry['definitions']): boolean;
+        export function isMultiSelect(schema: JSONSchema7, definitions?: Registry["definitions"]): boolean;
 
         export function isFilesArray(
             schema: JSONSchema7,
             uiSchema: UiSchema,
-            definitions?: Registry['definitions'],
+            definitions?: Registry["definitions"],
         ): boolean;
 
         export function isFixedItems(schema: JSONSchema7): boolean;
 
         export function allowAdditionalItems(schema: JSONSchema7): boolean;
 
-        export function optionsList(schema: JSONSchema7):  {
+        export function optionsList(schema: JSONSchema7): {
             schema?: JSONSchema7Definition;
             label: string;
             value: string;
@@ -374,19 +374,19 @@ declare module '@rjsf/core' {
 
         export function stubExistingAdditionalProperties<T = any>(
             schema: JSONSchema7,
-            definitions?: Registry['definitions'],
+            definitions?: Registry["definitions"],
             formData?: T,
         ): JSONSchema7;
 
         export function resolveSchema<T = any>(
             schema: JSONSchema7Definition,
-            definitions?: Registry['definitions'],
+            definitions?: Registry["definitions"],
             formData?: T,
         ): JSONSchema7;
 
         export function retrieveSchema<T = any>(
             schema: JSONSchema7Definition,
-            definitions?: Registry['definitions'],
+            definitions?: Registry["definitions"],
             formData?: T,
         ): JSONSchema7;
 
@@ -397,7 +397,7 @@ declare module '@rjsf/core' {
         export function toIdSchema<T = any>(
             schema: JSONSchema7Definition,
             id: string,
-            definitions: Registry['definitions'],
+            definitions: Registry["definitions"],
             formData?: T,
             idPredix?: string,
         ): IdSchema | IdSchema[];
@@ -405,7 +405,7 @@ declare module '@rjsf/core' {
         export function toPathSchema<T = any>(
             schema: JSONSchema7Definition,
             name: string | undefined,
-            definitions: Registry['definitions'],
+            definitions: Registry["definitions"],
             formData?: T,
         ): PathSchema | PathSchema[];
 
@@ -443,35 +443,34 @@ declare module '@rjsf/core' {
         export function getMatchingOption(
             formData: any,
             options: JSONSchema7[],
-            definitions: Registry['definitions'],
+            definitions: Registry["definitions"],
         ): number;
 
         export function schemaRequiresTrueValue(schema: JSONSchema7): boolean;
     }
 }
 
-declare module '@rjsf/core/lib/components/fields/SchemaField' {
-    import { JSONSchema7 } from 'json-schema';
-    import { FieldProps, UiSchema, IdSchema, FormValidation } from '@rjsf/core';
+declare module "@rjsf/core/lib/components/fields/SchemaField" {
+    import { JSONSchema7 } from "json-schema";
+    import { FieldProps, UiSchema, IdSchema, FormValidation } from "@rjsf/core";
 
-    export type SchemaFieldProps<T = any> = Pick<
-        FieldProps<T>,
-        'schema' | 'uiSchema' | 'idSchema' | 'formData' | 'errorSchema' | 'registry' | 'formContext'
-    >;
+    export type SchemaFieldProps<T = any> = Pick<FieldProps<T>,
+        "schema" | "uiSchema" | "idSchema" | "formData" | "errorSchema" | "registry" | "formContext">;
 
-    export default class SchemaField extends React.Component<SchemaFieldProps> {}
+    export default class SchemaField extends React.Component<SchemaFieldProps> {
+    }
 }
 
-declare module '@rjsf/core/lib/validate' {
-    import { JSONSchema7Definition } from 'json-schema';
-    import { AjvError, ErrorSchema, FormProps } from '@rjsf/core';
+declare module "@rjsf/core/lib/validate" {
+    import { JSONSchema7Definition } from "json-schema";
+    import { AjvError, ErrorSchema, FormProps } from "@rjsf/core";
 
     export default function validateFormData<T = any>(
         formData: T,
         schema: JSONSchema7Definition,
-        customValidate?: FormProps<T>['validate'],
-        transformErrors?: FormProps<T>['transformErrors'],
-        additionalMetaSchemas?: FormProps<T>['additionalMetaSchemas'],
-        customFormats?: FormProps<T>['customFormats'],
+        customValidate?: FormProps<T>["validate"],
+        transformErrors?: FormProps<T>["transformErrors"],
+        additionalMetaSchemas?: FormProps<T>["additionalMetaSchemas"],
+        customFormats?: FormProps<T>["customFormats"],
     ): { errors: AjvError[]; errorSchema: ErrorSchema };
 }

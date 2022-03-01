@@ -16,24 +16,24 @@ const deselectValue = (value: any, selected: any) => {
 };
 
 const CheckboxesWidget = ({
-  schema,
-  label,
-  id,
-  disabled,
-  options,
-  value,
-  autofocus,
-  readonly,
-  required,
-  onChange,
-  onBlur,
-  onFocus,
-}: WidgetProps) => {
+                            schema,
+                            label,
+                            id,
+                            disabled,
+                            options,
+                            value,
+                            autofocus,
+                            readonly,
+                            required,
+                            onChange,
+                            onBlur,
+                            onFocus,
+                          }: WidgetProps) => {
   const { enumOptions, enumDisabled, inline } = options;
 
   const _onChange = (option: any) => ({
-    target: { checked },
-  }: React.ChangeEvent<HTMLInputElement>) => {
+                                        target: { checked },
+                                      }: React.ChangeEvent<HTMLInputElement>) => {
     const all = (enumOptions as any).map(({ value }: any) => value);
 
     if (checked) {
@@ -46,8 +46,8 @@ const CheckboxesWidget = ({
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
   const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+                      target: { value },
+                    }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
     <>

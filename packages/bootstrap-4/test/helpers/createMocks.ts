@@ -13,7 +13,7 @@ export const mockSchema: JSONSchema7 = {
 export const mockEventHandlers = (): void => void 0;
 
 export function makeWidgetMockProps(
-  props: Partial<WidgetProps> = {}
+  props: Partial<WidgetProps> = {},
 ): WidgetProps {
   return {
     uiSchema: {},

@@ -21,7 +21,7 @@ inverted: Format to appear on dark backgrounds.
       "inverted": false,
       "errorOptions": {
         "size": "small",
-        "pointing": "above",
+        "pointing": "above"
       }
     }
   }

@@ -15,7 +15,7 @@ describe("TextareaWidget", () => {
       .create(
         <TextareaWidget
           {...makeWidgetMockProps({ rawErrors: ["Invalid 1", "Invalid 2"] })}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

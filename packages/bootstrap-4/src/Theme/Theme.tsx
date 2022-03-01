@@ -11,6 +11,7 @@ import Widgets from "../Widgets";
 
 import { ThemeProps } from "@rjsf/core";
 import { utils } from "@rjsf/core";
+
 const { getDefaultRegistry } = utils;
 
 const { fields, widgets } = getDefaultRegistry();

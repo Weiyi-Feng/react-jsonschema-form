@@ -5,27 +5,27 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
 import { ObjectFieldTemplateProps } from "@rjsf/core";
-import { utils } from '@rjsf/core';
+import { utils } from "@rjsf/core";
 
 import AddButton from "../AddButton/AddButton";
 
 const { canExpand } = utils;
 
 const ObjectFieldTemplate = ({
-  DescriptionField,
-  description,
-  TitleField,
-  title,
-  properties,
-  required,
-  uiSchema,
-  idSchema,
-  schema,
-  formData,
-  onAddClick,
-  disabled,
-  readonly
-}: ObjectFieldTemplateProps) => {
+                               DescriptionField,
+                               description,
+                               TitleField,
+                               title,
+                               properties,
+                               required,
+                               uiSchema,
+                               idSchema,
+                               schema,
+                               formData,
+                               onAddClick,
+                               disabled,
+                               readonly,
+                             }: ObjectFieldTemplateProps) => {
   return (
     <>
       {(uiSchema["ui:title"] || title) && (
@@ -60,8 +60,8 @@ const ObjectFieldTemplate = ({
               />
             </Col>
           </Row>
-        ) : null }
-      </Container> 
+        ) : null}
+      </Container>
     </>
   );
 };

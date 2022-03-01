@@ -5,32 +5,32 @@ import Form from "react-bootstrap/Form";
 import { WidgetProps } from "@rjsf/core";
 
 const PasswordWidget = ({
-  id,
-  required,
-  readonly,
-  disabled,
-  value,
-  label,
-  onFocus,
-  onBlur,
-  onChange,
-  options,
-  autofocus,
-  schema,
-  rawErrors = [],
-}: WidgetProps) => {
+                          id,
+                          required,
+                          readonly,
+                          disabled,
+                          value,
+                          label,
+                          onFocus,
+                          onBlur,
+                          onChange,
+                          options,
+                          autofocus,
+                          schema,
+                          rawErrors = [],
+                        }: WidgetProps) => {
   const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) =>
+                       target: { value },
+                     }: React.ChangeEvent<HTMLInputElement>) =>
     onChange(value === "" ? options.emptyValue : value);
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
   const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+                      target: { value },
+                    }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   return (
-    <Form.Group  className="mb-0">
+    <Form.Group className="mb-0">
       <Form.Label className={rawErrors.length > 0 ? "text-danger" : ""}>
         {label || schema.title}
         {(label || schema.title) && required ? "*" : null}

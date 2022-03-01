@@ -5,34 +5,34 @@ import Form from "react-bootstrap/Form";
 import { WidgetProps } from "@rjsf/core";
 
 const TextWidget = ({
-  id,
-  placeholder,
-  required,
-  readonly,
-  disabled,
-  type,
-  label,
-  value,
-  onChange,
-  onBlur,
-  onFocus,
-  autofocus,
-  options,
-  schema,
-  rawErrors = [],
-  uiSchema,
+                      id,
+                      placeholder,
+                      required,
+                      readonly,
+                      disabled,
+                      type,
+                      label,
+                      value,
+                      onChange,
+                      onBlur,
+                      onFocus,
+                      autofocus,
+                      options,
+                      schema,
+                      rawErrors = [],
+                      uiSchema,
 
-}: WidgetProps) => {
+                    }: WidgetProps) => {
   const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) =>
+                       target: { value },
+                     }: React.ChangeEvent<HTMLInputElement>) =>
     onChange(value === "" ? options.emptyValue : value);
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
   const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
-  const inputType = (type || schema.type) === 'string' ?  'text' : `${type || schema.type}`
+                      target: { value },
+                    }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const inputType = (type || schema.type) === "string" ? "text" : `${type || schema.type}`;
 
   // const classNames = [rawErrors.length > 0 ? "is-invalid" : "", type === 'file' ? 'custom-file-label': ""]
   return (

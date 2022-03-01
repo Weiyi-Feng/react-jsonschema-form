@@ -40,29 +40,29 @@ const processValue = (schema: any, value: any) => {
 };
 
 const SelectWidget = ({
-  schema,
-  id,
-  options,
-  label,
-  required,
-  disabled,
-  readonly,
-  value,
-  multiple,
-  autofocus,
-  onChange,
-  onBlur,
-  onFocus,
-  placeholder,
-  rawErrors = [],
-}: WidgetProps) => {
+                        schema,
+                        id,
+                        options,
+                        label,
+                        required,
+                        disabled,
+                        readonly,
+                        value,
+                        multiple,
+                        autofocus,
+                        onChange,
+                        onBlur,
+                        onFocus,
+                        placeholder,
+                        rawErrors = [],
+                      }: WidgetProps) => {
   const { enumOptions, enumDisabled } = options;
 
   const emptyValue = multiple ? [] : "";
 
   function getValue(
     event: React.FocusEvent | React.ChangeEvent | any,
-    multiple: Boolean
+    multiple: Boolean,
   ) {
     if (multiple) {
       return [].slice

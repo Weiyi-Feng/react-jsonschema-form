@@ -238,10 +238,10 @@ describe("single fields", () => {
   });
   test("using custom tagName", () => {
     const schema: JSONSchema7 = {
-      type: "string"
+      type: "string",
     };
     const tree = renderer
-      .create(<Form schema={schema} tagName="div"/>)
+      .create(<Form schema={schema} tagName="div" />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

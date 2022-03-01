@@ -5,30 +5,30 @@ import Form from "react-bootstrap/Form";
 import { WidgetProps } from "@rjsf/core";
 
 const RadioWidget = ({
-  id,
-  schema,
-  options,
-  value,
-  required,
-  disabled,
-  readonly,
-  label,
-  onChange,
-  onBlur,
-  onFocus,
-  uiSchema,
-}: WidgetProps) => {
+                       id,
+                       schema,
+                       options,
+                       value,
+                       required,
+                       disabled,
+                       readonly,
+                       label,
+                       onChange,
+                       onBlur,
+                       onFocus,
+                       uiSchema,
+                     }: WidgetProps) => {
   const { enumOptions, enumDisabled } = options;
 
   const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) =>
+                       target: { value },
+                     }: React.ChangeEvent<HTMLInputElement>) =>
     onChange(schema.type == "boolean" ? value !== "false" : value);
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) =>
     onBlur(id, value);
   const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+                      target: { value },
+                    }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
 
   const inline = Boolean(options && options.inline);
 

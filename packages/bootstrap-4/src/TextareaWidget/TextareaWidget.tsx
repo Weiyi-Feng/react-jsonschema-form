@@ -9,32 +9,32 @@ type CustomWidgetProps = WidgetProps & {
 };
 
 const TextareaWidget = ({
-  id,
-  placeholder,
-  value,
-  required,
-  disabled,
-  autofocus,
-  label,
-  readonly,
-  onBlur,
-  onFocus,
-  onChange,
-  options,
-  schema,
-  rawErrors = [],
-  uiSchema,
-}: CustomWidgetProps) => {
+                          id,
+                          placeholder,
+                          value,
+                          required,
+                          disabled,
+                          autofocus,
+                          label,
+                          readonly,
+                          onBlur,
+                          onFocus,
+                          onChange,
+                          options,
+                          schema,
+                          rawErrors = [],
+                          uiSchema,
+                        }: CustomWidgetProps) => {
   const _onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLTextAreaElement>) =>
+                       target: { value },
+                     }: React.ChangeEvent<HTMLTextAreaElement>) =>
     onChange(value === "" ? options.emptyValue : value);
   const _onBlur = ({
-    target: { value },
-  }: React.FocusEvent<HTMLTextAreaElement>) => onBlur(id, value);
+                     target: { value },
+                   }: React.FocusEvent<HTMLTextAreaElement>) => onBlur(id, value);
   const _onFocus = ({
-    target: { value },
-  }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
+                      target: { value },
+                    }: React.FocusEvent<HTMLTextAreaElement>) => onFocus(id, value);
 
   return (
     <>

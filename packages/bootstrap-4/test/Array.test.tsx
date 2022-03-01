@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Form from "../src/index";
 import { JSONSchema7 } from "json-schema";
 import renderer from "react-test-renderer";
@@ -8,8 +8,8 @@ describe("array fields", () => {
     const schema: JSONSchema7 = {
       type: "array",
       items: {
-        type: "string"
-      }
+        type: "string",
+      },
     };
     const tree = renderer
       .create(<Form schema={schema} />)
@@ -21,12 +21,12 @@ describe("array fields", () => {
       type: "array",
       items: [
         {
-          type: "string"
+          type: "string",
         },
         {
-          type: "number"
-        }
-      ]
+          type: "number",
+        },
+      ],
     };
     const tree = renderer
       .create(<Form schema={schema} />)
@@ -38,9 +38,9 @@ describe("array fields", () => {
       type: "array",
       items: {
         type: "string",
-        enum: ["a", "b", "c"]
+        enum: ["a", "b", "c"],
       },
-      uniqueItems: true
+      uniqueItems: true,
     };
     const tree = renderer
       .create(<Form schema={schema} />)

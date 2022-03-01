@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import { utils } from "@rjsf/core";
@@ -26,16 +25,16 @@ type WrapIfAdditionalProps = {
 };
 
 const WrapIfAdditional = ({
-  children,
-  disabled,
-  id,
-  label,
-  onDropPropertyClick,
-  onKeyChange,
-  readonly,
-  required,
-  schema,
-}: WrapIfAdditionalProps) => {
+                            children,
+                            disabled,
+                            id,
+                            label,
+                            onDropPropertyClick,
+                            onKeyChange,
+                            readonly,
+                            required,
+                            schema,
+                          }: WrapIfAdditionalProps) => {
   const keyLabel = `${label} Key`; // i18n ?
   const additional = schema.hasOwnProperty(ADDITIONAL_PROPERTY_FLAG);
 

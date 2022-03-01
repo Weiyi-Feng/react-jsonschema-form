@@ -10,7 +10,7 @@
     <img src="https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/logo.png" alt="Logo" width="180" height="120">
   </a>
 
-  <h3 align="center">@rjsf/core</h3>
+<h3 align="center">@rjsf/core</h3>
 
   <p align="center">
   Core logic and classic Bootstrap 3 theme for <a href="https://github.com/rjsf-team/react-jsonschema-form/"><code>react-jsonschema-form</code></a>.
@@ -32,8 +32,8 @@
 
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -94,19 +94,30 @@ Read our [contributors' guide](https://react-jsonschema-form.readthedocs.io/en/l
 
 rjsf team: [https://github.com/orgs/rjsf-team/people](https://github.com/orgs/rjsf-team/people)
 
-GitHub repository: [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
+GitHub
+repository: [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [build-shield]: https://github.com/rjsf-team/react-jsonschema-form/workflows/CI/badge.svg
+
 [build-url]: https://github.com/rjsf-team/react-jsonschema-form/actions
+
 [contributors-shield]: https://img.shields.io/github/contributors/rjsf-team/react-jsonschema-form.svg
+
 [contributors-url]: https://github.com/rjsf-team/react-jsonschema-form/graphs/contributors
+
 [license-shield]: https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square
+
 [license-url]: https://choosealicense.com/licenses/apache-2.0/
+
 [npm-shield]: https://img.shields.io/npm/v/@rjsf/core/latest.svg?style=flat-square
+
 [npm-url]: https://www.npmjs.com/package/@rjsf/core
+
 [npm-dl-shield]: https://img.shields.io/npm/dm/@rjsf/core.svg?style=flat-square
+
 [npm-dl-url]: https://www.npmjs.com/package/@rjsf/core
+
 [product-screenshot]: https://raw.githubusercontent.com/rjsf-team/react-jsonschema-form/59a8206e148474bea854bbb004f624143fbcbac8/packages/core/screenshot.png

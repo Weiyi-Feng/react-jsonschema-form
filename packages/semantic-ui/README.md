@@ -116,7 +116,7 @@ Below are the current default options for all widgets:
       "inverted": false,
       "errorOptions": {
         "size": "small",
-        "pointing": "above",
+        "pointing": "above"
       }
     }
   }

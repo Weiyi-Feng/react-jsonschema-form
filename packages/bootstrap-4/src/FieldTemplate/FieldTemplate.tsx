@@ -8,21 +8,21 @@ import ListGroup from "react-bootstrap/ListGroup";
 import WrapIfAdditional from "./WrapIfAdditional";
 
 const FieldTemplate = ({
-  id,
-  children,
-  displayLabel,
-  rawErrors = [],
-  rawHelp,
-  rawDescription,
-  classNames,
-  disabled,
-  label,
-  onDropPropertyClick,
-  onKeyChange,
-  readonly,
-  required,
-  schema,
-}: FieldTemplateProps) => {
+                         id,
+                         children,
+                         displayLabel,
+                         rawErrors = [],
+                         rawHelp,
+                         rawDescription,
+                         classNames,
+                         disabled,
+                         label,
+                         onDropPropertyClick,
+                         onKeyChange,
+                         readonly,
+                         required,
+                         schema,
+                       }: FieldTemplateProps) => {
   return (
     <WrapIfAdditional
       classNames={classNames}

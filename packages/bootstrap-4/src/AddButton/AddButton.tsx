@@ -5,8 +5,8 @@ import Button from "react-bootstrap/Button";
 import { BsPlus } from "react-icons/bs";
 
 const AddButton: React.FC<AddButtonProps> = props => (
-  <Button {...props} style={{width: "100%"}} className={`ml-1 ${props.className}`}>
-    <BsPlus/>
+  <Button {...props} style={{ width: "100%" }} className={`ml-1 ${props.className}`}>
+    <BsPlus />
   </Button>
 );
 

@@ -11,7 +11,7 @@ describe("IconButton", () => {
           className="someClass"
           onClick={() => void 0}
           disabled={false}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

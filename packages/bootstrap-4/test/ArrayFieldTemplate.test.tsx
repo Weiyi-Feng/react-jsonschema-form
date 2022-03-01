@@ -5,6 +5,7 @@ import renderer from "react-test-renderer";
 import TitleField from "../src/TitleField";
 import { mockSchema } from "./helpers/createMocks";
 import { utils } from "@rjsf/core";
+
 const { getDefaultRegistry } = utils;
 
 describe("ArrayFieldTemplate", () => {
@@ -29,7 +30,7 @@ describe("ArrayFieldTemplate", () => {
           // TODO : isSchema should be fixed here
           // @ts-ignore
           idSchema={{}}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

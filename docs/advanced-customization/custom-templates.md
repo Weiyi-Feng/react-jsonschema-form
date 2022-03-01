@@ -2,13 +2,13 @@
 
 This is an advanced feature that lets you customize even more aspects of the form:
 
-_ | Custom Field  | Custom Template | Custom Widget
---|---------- | ------------- | ----
-**What it does** | Overrides all behaviour | Overrides just the layout (not behaviour) | Overrides just the input box (not layout, labels, or help, or validation)
-**Usage** | Global or per-field | Global or per-field | Global or per-field
-**Global Example** | `<Form fields={MyCustomField} />` |  `<Form ArrayFieldTemplate={MyArrayTemplate} />` | `<Form widgets={MyCustomWidget} />`
-**Per-Field Example** | `"ui:field": MyCustomField` |  `"ui:ArrayFieldTemplate": MyArrayTemplate` | `"ui:widget":MyCustomWidget`
-**Documentation** | [Custom Fields](custom-widgets-fields.md) | [FieldTemplate](#FieldTemplate) / [ArrayFieldTemplate](#ArrayFieldTemplate) / [ObjectFieldTemplate](#ObjectFieldTemplate) | [Custom Widgets](custom-widgets-fields.md)
+| _                     | Custom Field                              | Custom Template                                                                                                           | Custom Widget                                                             |
+|-----------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **What it does**      | Overrides all behaviour                   | Overrides just the layout (not behaviour)                                                                                 | Overrides just the input box (not layout, labels, or help, or validation) |
+| **Usage**             | Global or per-field                       | Global or per-field                                                                                                       | Global or per-field                                                       |
+| **Global Example**    | `<Form fields={MyCustomField} />`         | `<Form ArrayFieldTemplate={MyArrayTemplate} />`                                                                           | `<Form widgets={MyCustomWidget} />`                                       |
+| **Per-Field Example** | `"ui:field": MyCustomField`               | `"ui:ArrayFieldTemplate": MyArrayTemplate`                                                                                | `"ui:widget":MyCustomWidget`                                              |
+| **Documentation**     | [Custom Fields](custom-widgets-fields.md) | [FieldTemplate](#FieldTemplate) / [ArrayFieldTemplate](#ArrayFieldTemplate) / [ObjectFieldTemplate](#ObjectFieldTemplate) | [Custom Widgets](custom-widgets-fields.md)                                |
 
 ## ArrayFieldTemplate
 
